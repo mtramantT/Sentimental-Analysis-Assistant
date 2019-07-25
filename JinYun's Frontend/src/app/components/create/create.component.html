@@ -1,0 +1,47 @@
+<p>Creating a Blog</p>
+<div class="dropdown">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" style="background:lightblue">
+    Select One
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="create">Create Blog</a>
+    <a class="dropdown-item" href="view">View Blog</a>
+    <a class="dropdown-item" href="review">Write Reviews</a>
+  </div>
+</div>
+<hr>
+<form id="usrform">
+  Give a name to your Blog: 
+  <br>
+  <input type="text" name="usrname" required>
+
+  <br>
+
+  <input type="checkbox" name="facebook" value="facebook"> Facebook<br>
+  <input type="checkbox" name="snapchat" value="snapchat"> Snapchat<br>
+  <input type="checkbox" name="instagram" value="instagram">Instagram<br><br>
+
+  How Many Hours You Spent On Social Media, Today? <br>
+  <select name="typelist" required>
+    <option value="" id="listdefault">--Hours--</option>
+    <option value="0">Less than One Hour</option>
+    <option value="1">1 hour</option>
+    <option value="2">2 hours</option>
+    <option value="3">3 hours</option>
+    <option value="4">4 hours</option>
+    <option value="5">5 hours</option>
+    <option value="6">6 hours</option>
+    <option value="7">7 hours</option>
+    <option value="8">8 hours</option>
+    <option value="10">More than 8 hours</option>
+  </select>
+
+  <br>
+  <br>
+
+  <textarea rows="4" cols="60" name="comment" form="usrform" required>Start your blog here...</textarea>
+
+  <br>
+  <input type="submit">
+
+</form>
