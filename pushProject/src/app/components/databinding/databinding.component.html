@@ -1,0 +1,57 @@
+<div class="osection">
+    <h2>Databinding</h2>
+    <p>
+        In angular, databinding is the act of passing data from the back
+        to the front or vice versa. note that the "view" is the part of
+        the component that actually displays information to the user
+        <br>
+        There are 3 ways to perform one-way databinding. These are
+        techniques where either the data is passed from the front to
+        the back or the back to the front
+    </p>
+
+    <h3>String Interpolation</h3>
+    <p>
+        In order to perform interpolation, you need to write the item
+        to be evaluated in between double curly braces:
+        {{<b>expression</b>}}. It is essentially a block of typescript as
+        innerHTML.
+    </p>
+
+    <p><b>Examples</b></p>
+    <br>2 + 5 * 3 - 1 * 88 = {{2 + 5 * 3 - 1 * 88}}
+    <br>The Secret Message is.....{{variable}}
+    <hr>
+    <h3>Property Binding</h3>
+    <p>
+        Property binding is a "one-way binding" technique that binds
+        from the back to the front. We do this by surrounding what would
+        be the attribute of the elemnt with square brackets
+        [like this]
+    </p>
+    <button class="btn btn-danger" (click)="toggleVisibility()">
+        Toggle
+    </button>
+    <div [hidden]="visibility">
+        <p>Here I am!</p>
+    </div>
+    <h3>Event Binding</h3>
+    <p>
+        Event binding is the third type of one-way binding. It is done
+        within the element's tag, agian like property binding, except
+        we put it within paranthesis (). We will typically end up wrapping
+        these around actual events as well. Ex: (click)
+    </p>
+
+    <h3>Two-Way databinding</h3>
+    <p>
+        We can set up two way databinding, where data we input is
+        fed back to a component and can be brought back all in
+        the same action. In order to do this, we invoke both property
+        and event binding. EX: [(ngModel)]
+    </p>
+    <input type="text" [(ngModel)]="userInput">
+    <p>
+        Your input is: {{userInput}}
+    </p>
+</div>
