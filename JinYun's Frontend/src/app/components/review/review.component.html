@@ -10,16 +10,16 @@
   </div>
 </div>
 <hr>
-<form id="review">
-  <fieldset class="rating">
+<!-- <form id="review"> -->
+<!-- <fieldset class="rating">
     <legend>Give a star rating:</legend>
     <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
     <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
     <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
     <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
     <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
-  </fieldset>
-  <br>
+  </fieldset> -->
+<!-- <br>
   <br>
   <br>
   <br>
@@ -30,4 +30,50 @@
     Write down your feeling about us:
   
   <textarea rows="5" cols="60" name="comment" form="review" required>Comments.....</textarea>
-</form>
+
+  <input type="button" value="SUBMIT"><br>
+</form> -->
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset=med-1">
+        <div class="row">
+          <!--Below is the right side of the div -->
+
+          <div class="col-md-3 col-sm-4 col-xs-12"></div>
+
+          <div class="col-md-5 col-sm-4 register-right top-buffer" id="review">
+            <!--<div class="col-md-4 col-sm-4 col-xs-12  register-right">-->
+            <!--<div class="col-md-7 register-right">-->
+            <h2>Reviews</h2>
+            <div [hidden]="submitted" style="width: 300px;">
+              <form (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username" required name="username"
+                    [(ngModel)]="review.username">
+                </div>
+
+                <div class="form-group">
+                  <label for="comment">Tell Us How You Think About Us</label>
+                  <textarea class="form-control" id="comment" required name="comment"
+                    [(ngModel)]="review.comment"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+
+            <div [hidden]="!submitted">
+              <h4>You submitted successfully!</h4>
+              <button class="btn btn-success" (click)="newReview()">Add</button>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogServiceService } from 'src/app/services/blog-service.service';
+import { Blog } from 'src/app/components/create/blog';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
-
+  blog: Blog = new Blog();
+  submitted = false;
+ 
+  constructor(private blogService: BlogServiceService) { }
+  //private blogService: BlogServiceService
+ 
   ngOnInit() {
+  }
+ 
+  newBlog(): void {
+    this.submitted = false;
+    this.blog = new Blog();
+  }
+ 
+  save() {
+    this.blogService.createBlog(this.blog)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.submitted = true;
+        },
+        error => console.log(error));
+    this.blog = new Blog();
+  }
+ 
+  onSubmit() {
+    this.save();
   }
 
 }

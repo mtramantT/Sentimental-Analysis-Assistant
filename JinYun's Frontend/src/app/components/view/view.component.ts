@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BlogView } from './view-blog';
+import { BlogViewService } from 'src/app/services/blog-view.service';
 
 @Component({
   selector: 'app-view',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewComponent implements OnInit {
 
-  constructor() { }
+  blogs:BlogView[]=[];
+
+
+  constructor(private bvs:BlogViewService) {
+    //dependency injection
+    
+  }
 
   ngOnInit() {
+    this.bvs
+    .getAllBlogs()
+    //returning observable
+    .subscribe(
+      data =>{
+        console.log(data);
+        this.blogs = data;
+      },
+      error =>{
+        console.log(error);
+      }
+    )
   }
 
 }

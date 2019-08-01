@@ -1,1 +1,13 @@
 <p>profile works!</p>
+<div style="display: block">
+    <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"></canvas>
+</div>
+<!--Base on the api, we will populate the data in the table-->
+<input [(ngModel)] = "ID"><br>
+    <input type="button" value="SUBMIT" (click)=fetchData()><br>
+    <table>
+        <!--Change to avaliable names for table header, to match whatever is in the api: For exmaple: -->
+        <tr><th>NAME</th><td>{{senti.name}}</td></tr>
+        <tr><th>ID</th><td>{{senti.id}}</td></tr>
+        <tr><th>Mood</th><td>{{senti.mood}}</td></tr>
+    </table>
