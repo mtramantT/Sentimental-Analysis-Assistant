@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms';
+
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 import {ChartsModule}from'ng2-charts';
@@ -17,6 +18,10 @@ import { CreateComponent } from './components/create/create.component';
 import { ViewComponent } from './components/view/view.component';
 import { ReviewComponent } from './components/review/review.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './components/about/about.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 @NgModule({
   declarations: [
@@ -28,10 +33,15 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     CreateComponent,
     ViewComponent,
-    ReviewComponent
+    ReviewComponent,
+    AboutComponent,
+    SignupComponent,
+    LoginComponent,
+    ReviewsComponent
     //
     
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,9 +49,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

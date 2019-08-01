@@ -7,6 +7,9 @@ import { ContactComponent } from './components/contact/contact.component';
 import { CreateComponent } from './components/create/create.component';
 import { ViewComponent } from './components/view/view.component';
 import { ReviewComponent } from './components/review/review.component';
+import { AboutComponent } from './components/about/about.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
@@ -14,10 +17,28 @@ const routes: Routes = [
     path:'home',//like url pattern
     component:HomeComponent
   },
+  {
+    path:'',//like url pattern
+    component:HomeComponent
+  },
 
   {
     path:'profile',//like url pattern
     component:ProfileComponent
+  },
+  {
+    path:'about',
+    component:AboutComponent
+  },
+  
+  {
+    path:'login',
+    component:LoginComponent
+  },
+
+  {
+    path:'signup',
+    component:SignupComponent
   },
 
   {

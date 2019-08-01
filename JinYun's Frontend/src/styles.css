@@ -1,8 +1,93 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 
-body{
-    background-color:white;
+/*    You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-color: #3b8beb;
+  overflow: hidden;
 }
 
+.navbar-brand {
+  font-family: "Anton", sans-serif;
+}
 
+/*below is for the paragraph */
+/* .center1 {
+  font-family: "Anton", sans-serif;
+} */
+
+.jumbotron {
+  background-image: url(you.jpg);
+  background-size: cover;
+  height: 971px;
+  color: white;
+}
+/* the signup and review button on homepage*/
+.btn1 {
+  background-color: transparent;
+  border-color: aliceblue;
+  /* border-radius: 1.5em; */
+  border-style: none;
+  color: white;
+  font-weight: 900;
+  margin-top: 600px;
+  margin-left: 185px;
+  width: 120px;
+  height: 50px;
+}
+
+/* Below is the review button */
+/* .btn1:hover {
+  background-color: lightcoral;
+  color: white;
+  opacity: 0.8;
+} */
+
+.bttn {
+  background-color: lightcoral;
+  border-color: none;
+  border-radius: 1.5em;
+  border-style: none;
+  color: white;
+  font-weight: 900;
+  margin-top: 600px;
+  margin-left: 168px;
+  width: 120px;
+  height: 50px;
+}
+.bttn:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.fMe {
+  font-family: "Anton", sans-serif;
+  letter-spacing: 3px;
+}
+
+/* Below is the review button */
+/* .btn2:hover {
+  background-color: lightcoral;
+  color: white;
+  opacity: 0.8;
+} */
+
+/* .osection {
+  background: burlywood;
+  color: aliceblue;
+  border-radius: 15px;
+  border: 5px outset rgb(226, 131, 43);
+  margin: 10px;
+  padding: 10px;
+}
+
+.osection .osection {
+  background: sandybrown;
+  color: honeydew;
+  border-radius: 15px;
+  border: 5px outset brown;
+  margin: 10px;
+  padding: 10px;
+} */

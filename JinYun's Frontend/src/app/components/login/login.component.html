@@ -1,0 +1,97 @@
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" routerLinkActive="active" routerLink="/home">Meraki</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links   href="login"-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar"></div>
+      </nav>
+      
+      <!--below is start of the login container-->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset=med-1">
+            <div class="row">
+              <!--Below is the right side of the div -->
+      
+              <div class="col-md-4 col-sm-4 col-xs-12"></div>
+      
+              <div class="col-md-7 col-sm-4   register-right top-buffer ">
+                <!--<div class="col-md-4 col-sm-4 col-xs-12  register-right">-->
+                <!--<div class="col-md-7 register-right">-->
+                <h2>Login</h2>
+                <form [formGroup]="registrationForm1">
+                  <!--Below is the start of creating the form -->
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm1.get('userName').invalid &&
+                        registrationForm1.get('userName').touched
+                      "
+                      formControlName="userName"
+                      type="text"
+                      class="form-control"
+                    />
+      
+                    <div
+                      *ngIf="
+                        registrationForm1.get('userName').invalid &&
+                        registrationForm1.get('userName').touched
+                      "
+                    >
+                      <small
+                        *ngIf="registrationForm1.get('userName').errors?.required"
+                        class="text-danger"
+                      >
+                        Username is required
+                      </small>
+                    </div>
+                  </div>
+                  <!-- The end of  username -->
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm1.get('passWord').invalid &&
+                        registrationForm1.get('passWord').touched
+                      "
+                      formControlName="passWord"
+                      type="text"
+                      class="form-control"
+                    />
+      
+                    <div
+                      *ngIf="
+                        registrationForm1.get('passWord').invalid &&
+                        registrationForm1.get('passWord').touched
+                      "
+                    >
+                      <small
+                        *ngIf="registrationForm1.get('passWord').errors?.required"
+                        class="text-danger"
+                      >
+                        Password is required
+                      </small>
+                    </div>
+                  </div>
+                  <!--end of password-->
+                  <button class="btn btn-primary" type="submit">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of container-->
+      

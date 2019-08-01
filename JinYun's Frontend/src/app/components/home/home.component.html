@@ -1,3 +1,75 @@
-<p>home works!</p>
-<h1>Welcome to the BLRT Home Page</h1>
-<div class="bg"></div>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top">
+    <!-- Brand -->
+    <a class="navbar-brand" routerLinkActive="active" routerLink="/home"
+      >Meraki</a
+    >
+  
+    <!-- Toggler/collapsibe Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#collapsibleNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <!-- Navbar links   href="login"-->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/login"
+            >LOGIN</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <section>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <!-- <a href="#" class="btn btn-primary bMove" role="button">SIGNUP</a>
+          
+        <a href="#" class="btn  btn-primary bMove" role="button">REVIEW</a> -->
+        <!--<button class="btn1" type="button">SIGNUP</button>-->
+        <!-- <p class="center1">MERAKI</p> -->
+        <span class="btn1">
+          <a
+            routerLinkActive="active"
+            routerLink="/signup"
+            class="btn bttn  btn-lg fMe"
+            role="button"
+            >SIGNUP</a
+          >
+        </span>
+  <!-------------------------reviews---------------------------------------------------------->
+        <a
+          routerLinkActive="active"
+          routerLink="/reviews"
+          class="btn bttn btn1 btn-lg fMe"
+          role="button"
+          >REVIEW</a
+        >
+  
+        <!--  <button class="btn2" type="button">REVIEW</button>-->
+      </div>
+    </div>
+    
+  </section>
+<!--nav bar-->
+<!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top">
+  Brand -->
+<!-- <a class="navbar-brand" routerLinkActive="active" routerLink="home">Meraki</a>
+  <a class="navbar-brand" routerLinkActive="active" routerLink="about">About</a>
+  <a class="navbar-brand" routerLinkActive="active" routerLink="portfolio"
+    >Portfolio</a
+  >
+  <a class="navbar-brand" routerLinkActive="active" routerLink="blog">Blog</a>
+  <a class="navbar-brand" routerLinkActive="active" routerLink="home">Logout</a> -->
+
+<!-- Navbar links   href="login"-->
+<!-- <div class="collapse navbar-collapse" id="collapsibleNavbar"></div>
+</nav> -->
+

@@ -1,0 +1,243 @@
+<!--nav bar-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark  fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand" routerLinkActive="active" routerLink="/home">Meraki</a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links   href="login"-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar"></div>
+      </nav>
+      
+      <!--validation form-->
+      
+      <div class="container-fluid">
+        <!--added code-->
+        <div class="row">
+          <div class="col-md-10 offset=med-1">
+            <div class="row">
+              <div class="col-md-7 register-right">
+                <!--added code-->
+                <h2>Sign Up</h2>
+                <form [formGroup]="registrationForm">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm.get('firstName').invalid &&
+                        registrationForm.get('firstName').touched
+                      "
+                      formControlName="firstName"
+                      type="text"
+                      class="form-control"
+                    />
+      
+                    <div
+                      *ngIf="
+                        registrationForm.get('firstName').invalid &&
+                        registrationForm.get('firstName').touched
+                      "
+                    >
+                      <small
+                        *ngIf="registrationForm.get('firstName').errors?.required"
+                        class="text-danger"
+                      >
+                        First Name is required
+                      </small>
+                      <small
+                        *ngIf="registrationForm.get('firstName').errors?.minlength"
+                        class="text-danger"
+                      >
+                        First Name must be at least 6 character</small
+                      >
+                    </div>
+                  </div>
+      
+                  <!--below is the last name area-->
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm.get('lastName').invalid &&
+                        registrationForm.get('lastName').touched
+                      "
+                      formControlName="lastName"
+                      type="text"
+                      class="form-control"
+                    />
+                    <div
+                      *ngIf="
+                        registrationForm.get('lastName').invalid &&
+                        registrationForm.get('lastName').touched
+                      "
+                    >
+                      <small
+                        *ngIf="registrationForm.get('lastName').errors?.required"
+                        class="text-danger"
+                      >
+                        Last Name is required
+                      </small>
+                      <small
+                        *ngIf="registrationForm.get('lastName').errors?.minlength"
+                        class="text-danger"
+                      >
+                        Last Name must be at least 6 character</small
+                      >
+                    </div>
+                  </div>
+      
+                  <!--below is the email area-->
+      
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm.get('email').invalid &&
+                        registrationForm.get('email').touched
+                      "
+                      formControlName="email"
+                      type="email"
+                      class="form-control"
+                    />
+                    <small
+                      *ngIf="registrationForm.get('firstName').errors?.required"
+                      class="text-danger"
+                    >
+                      Email is required
+                    </small>
+                  </div>
+      
+                  <!--below is the username area-->
+                  <div class="form-group">
+                    <label>Username</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm.get('userName').invalid &&
+                        registrationForm.get('userName').touched
+                      "
+                      formControlName="userName"
+                      type="text"
+                      class="form-control"
+                    />
+                    <small
+                      *ngIf="registrationForm.get('firstName').errors?.required"
+                      class="text-danger"
+                    >
+                      Username is required
+                    </small>
+                  </div>
+      
+                  <!--below is password area-->
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input
+                      [class.is-invalid]="
+                        registrationForm.get('passWord').invalid &&
+                        registrationForm.get('passWord').touched
+                      "
+                      formControlName="passWord"
+                      type="password"
+                      class="form-control"
+                    />
+                    <small
+                      *ngIf="registrationForm.get('passWord').errors?.required"
+                      class="text-danger"
+                    >
+                      Password is required
+                    </small>
+                  </div>
+      
+                  <!--below is the button you need-->
+                  <!-- <button class="btn btn-primary" type="submit">SignUp</button> -->
+                  <a
+                    routerLinkActive="active"
+                    routerLink="/about"
+                    class="btn  btn-primary "
+                    role="button"
+                    >About</a
+                  >
+                </form>
+                {{ registrationForm.value | json }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!--below is the json pipe-->
+      <!-- {{ registrationForm.value | json }}
+      </div> -->
+      
+      <!--end of validation form-->
+      
+      <!-- <div class="container">
+        <div class="row">
+          <div class="col-md-10 offset=med-1">
+            <div class="row"> -->
+      <!--Below is the right side of the div -->
+      <!-- <div class="col-md-7 register-right top-buffer1">
+                <h2>SIGNUP HERE</h2> -->
+      <!--below is the start of my form-->
+      
+      <!--Below is the start of creating the form -->
+      <!-- <div class="register-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fName"
+                      placeholder="First Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lName"
+                      placeholder="Last Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userName"
+                      placeholder="User Name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="passWord"
+                      placeholder="Password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="emailAddress"
+                      placeholder="Email Address"
+                    />
+                  </div>
+      
+                  <button type="button" class="btn btn-primary ">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div> -->
+      <!-- </div> -->
+      
